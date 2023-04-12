@@ -1,4 +1,4 @@
-def get_input(prompt):
+def fartinput(prompt):
     while True:
         try:
             value = float(input(prompt))
@@ -9,9 +9,9 @@ def get_input(prompt):
         except ValueError:
             print("Error: Invalid input. Please enter a number.")
 
-base1 = get_input("Enter the length of base 1: ")
-base2 = get_input("Enter the length of base 2: ")
-height = get_input("Enter the height: ")
+base1 = fartinput("Enter the length of base 1: ")
+base2 = fartinput("Enter the length of base 2: ")
+height = fartinput("Enter the height: ")
 
 area = 0.5 * (base1 + base2) * height
 
