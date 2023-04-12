@@ -1,10 +1,18 @@
-# Ask the user for input
-base1 = float(input("Enter the length of base 1: "))
-base2 = float(input("Enter the length of base 2: "))
-height = float(input("Enter the height: "))
+def get_input(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            if value <= 0:
+                print("Error: Value must be greater than 0.")
+            else:
+                return value
+        except ValueError:
+            print("Error: Invalid input. Please enter a number.")
 
-# Calculate the area of the trapezoid
+base1 = get_input("Enter the length of base 1: ")
+base2 = get_input("Enter the length of base 2: ")
+height = get_input("Enter the height: ")
+
 area = 0.5 * (base1 + base2) * height
 
-# Print the result
 print("The area of the trapezoid is:", area)
